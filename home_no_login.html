@@ -3,7 +3,8 @@
 
 <head>
 	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-	<link href="home_no_login.css" type="text/css" rel="stylesheet">
+	<script src="easylin.js"></script>
+	<link href="easylin.css" type="text/css" rel="stylesheet">
 	<title></title>
 </head>
 
@@ -13,14 +14,24 @@
 			NCTUOJ
 		</div>
 		<div class="leftnav">
-			right side
+
+			<div class="buttonWrapper">
+				<button>
+					Global
+				</button>
+			</div>
+			<button data-trigger="signInCard">
+				Sign in
+			</button>
 		</div>
 	</div>
-	<div class="card">
-		<input class="cardInput" placeholder="Account">
-
+	<div class="card" name="signInCard">
 		<input class="cardInput" placeholder="Account">
 	</div>
+
+	<script>
+	</script>
+
 </body>
 
 </html>

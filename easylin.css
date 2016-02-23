@@ -12,11 +12,11 @@ body {
 	-webkit-justify-content: center;
 	justify-content: center;
 	border-bottom: 2px solid;
+	position: fixed;
 	width: 100%;
 	min-height: 40px;
+	top: 0;
 	height: 40;
-
-
 }
 
 .title {
@@ -37,33 +37,83 @@ body {
 	margin-right: 5px;
 }
 
+.card.hide {
+	opacity: 0;
+}
+
+
+
 .card {
 
 	/* blank card */
-	margin-top: 20px;
+	margin-top: 200px;
 	margin-left: 50px;
+	border: 2.5px dashed;
+	border-color: #44BBA4;
+
 
 	display: -webkit-flex;
 	display: flex;
 	-webkit-align-items: center;
 	align-items: center;
 	-webkit-justify-content: center;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
 	justify-content: center;
 	flex-wrap: wrap;
 	width: 400px;
 	height: 600px;
-	border: 3px dashed;
-	border-color: #E7E5DF;
+	opacity: 1;
+}
+
+
+.cardInputWrapper {
+
 }
 
 .cardInput {
 	position: relative;
 	background: transparent;
 	border: none;
-	border-bottom: 2px solid;
 	color: #E7BB41;
 	outline: none;
 	padding: 8px 0;
 	font-size: 16px;
 	width: 60%;
 }
+
+button {
+	margin: 3px;
+	width: 90px;
+	height: 25px;display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	background-image: -webkit-linear-gradient(left, #50514F 50%, #5B5C5A 50%);
+	background-image: linear-gradient(left, #50514F 50%, #5B5C5A 50%);
+	background-size: 200%;
+	background-position: 0px;
+	outline: none;
+	color: #D3D0CB;
+	border-color: #7B8286;
+	border-style: solid;
+	border-width: 2.5px;
+
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+
+}
+
+button:hover {
+	border-color: #E8BB40;
+}
+
+
+button.clicked {
+	background-position: -100%;
+}
+
+
+
