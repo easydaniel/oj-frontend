@@ -1,0 +1,69 @@
+body {
+	background-color: #50514f;
+	color: #e7e5df;
+	margin: 0px;
+}
+
+.nav {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	border-bottom: 2px solid;
+	width: 100%;
+	min-height: 40px;
+	height: 40;
+
+
+}
+
+.title {
+	-webkit-flex: 1;
+	flex: 1;
+	margin-left: 5px;
+}
+
+.leftnav {
+	-webkit-flex: 3;
+	flex: 3;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+	margin-right: 5px;
+}
+
+.card {
+
+	/* blank card */
+	margin-top: 20px;
+	margin-left: 50px;
+
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 400px;
+	height: 600px;
+	border: 3px dashed;
+	border-color: #E7E5DF;
+}
+
+.cardInput {
+	position: relative;
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid;
+	color: #E7BB41;
+	outline: none;
+	padding: 8px 0;
+	font-size: 16px;
+	width: 60%;
+}
