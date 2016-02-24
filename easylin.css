@@ -5,6 +5,7 @@ body {
 	margin-bottom: 120px;
 }
 
+
 /* Footer section start */
 
 footer {
@@ -16,7 +17,8 @@ footer {
 	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 	background-color: #50514F;
-	box-shadow: 0px -2px 50px #111111;
+	box-shadow: 0px -2px 30px #111111;
+	z-index: 100;
 }
 
 footer.show {
@@ -128,6 +130,18 @@ footer.show {
 	text-align: center;
 }
 
+.-mobile-box-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	border-top: 2.4px solid;
+	border-top-color: #7B8286;
+	width: 85%;
+	margin: auto;
+}
 
 /* Footer section end */
 /* Container section start */
@@ -139,6 +153,8 @@ footer.show {
 
 
 /* Container section end */
+
+
 /* Button section start */
 
 .button {
@@ -178,12 +194,7 @@ footer.show {
 /* Button section end */
 /* Navbar menu section start */
 
-header {
-	box-shadow: 0px 100px 100px #000000;
-}
-
 .nav {
-	position: relative;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-align-items: center;
@@ -198,6 +209,7 @@ header {
 	top: 0;
 	height: 40;
 	z-index: 100;
+	box-shadow: 0px 2px 30px #111111;
 }
 
 .logo img {
@@ -313,6 +325,7 @@ header {
 	padding: 0;
 	position: fixed;
 	top: 44px;
+	z-index: 100;
 	width: 100%;
 }
 
@@ -387,8 +400,6 @@ header {
 
 
 /* Navbar menu section end */
-
-
 /*initialize start*/
 
 *,
@@ -685,7 +696,8 @@ input.sign-up-placeholder:-ms-input-placeholder {
 }
 
 @media screen and (min-width: 768px) {
-	.navbar-menu {
+	.navbar-menu,
+	.mobile.box-container {
 		display: none;
 	}
 }
