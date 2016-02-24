@@ -261,6 +261,8 @@ body {
 	padding: 10px 0;
 	text-align: center;
 	text-decoration: none;
+	-webkit-user-select: none;
+	user-select: none;
 	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	border-bottom: 2.5px solid rgba(255, 255, 255, 0.3);
@@ -279,12 +281,6 @@ body {
 /* Navbar menu section end */
 /* Responsive With Device section start */
 
-@media screen and (min-width: 768px) {
-	.navbar-menu,
-	.navbar-menu-list {
-		display: none;
-	}
-}
 
 @media screen and (max-width: 768px) {
 	.navbar-menu-wrapper {
@@ -300,6 +296,12 @@ body {
 	}
 	.logo-title {
 		flex: 2;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.navbar-menu {
+		display: none;
 	}
 }
 
