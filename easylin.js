@@ -56,15 +56,13 @@ function detectScrollToBottomEvent() {
 function showForm(){
 	$('.tryform').click(function (e) {
 		e.preventDefault();
-		$('#card').addClass('active');
+		$('#card').toggleClass('active');
 	});
 
 	$('.sign-up').on('click', function(){
 		$('.info-state').addClass('right');
 	  	$('.form-input').addClass('slide');
 	  	$('.sign-in').toggleClass('active');
-
-		//$("input").val('');
 	  	$('.sign-up').toggleClass('active');
 
 	});
@@ -72,10 +70,7 @@ function showForm(){
 		$('.info-state').removeClass('right');
 		$('.form-input').removeClass('slide');
 		$('.sign-in').toggleClass('active');
-
-		//$("input").val('');
 		$('.sign-up').toggleClass('active');
-
 	});
 
 }
