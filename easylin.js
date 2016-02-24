@@ -39,8 +39,15 @@ function detectScrollToBottomEvent() {
 	$(window).scroll(function () {
 		if ($(window).scrollTop() + $(window).height() == $(document).height()) {
 			$('footer').addClass('show');
+			$('.footer-toggle').addClass('show');
 		} else {
 			$('footer').removeClass('show');
+			$('.footer-toggle').removeClass('show');
 		}
 	});
+	$('.footer-toggle').click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass('open');
+		$('footer').toggleClass('show');
+	})
 }
