@@ -3,6 +3,7 @@ $(document).ready(function () {
 	createNavbarMenuAnimation();
 	createVerdictTypeSwitchAnimation();
 	detectScrollToBottomEvent();
+	showForm();
 });
 
 function createNavbarMenuAnimation() {
@@ -43,4 +44,31 @@ function detectScrollToBottomEvent() {
 			$('footer').removeClass('show');
 		}
 	});
+}
+
+function showForm(){
+	$('.tryform').click(function (e) {
+		e.preventDefault();
+		$('#card').addClass('active');
+	});
+
+	$('.sign-up').on('click', function(){
+		$('.info-state').addClass('right');
+	  	$('.form-input').addClass('slide');
+	  	$('.sign-in').toggleClass('active');
+
+		//$("input").val('');
+	  	$('.sign-up').toggleClass('active');
+
+	});
+	$('.sign-in').on('click', function(){
+		$('.info-state').removeClass('right');
+		$('.form-input').removeClass('slide');
+		$('.sign-in').toggleClass('active');
+
+		//$("input").val('');
+		$('.sign-up').toggleClass('active');
+
+	});
+
 }
