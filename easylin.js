@@ -5,10 +5,10 @@ $(document).ready(function () {
 	createVerdictTypeSwitchAnimation();
 	createFooterAnimation();
 	createMobileFooterAnimation();
-	//	detectScrollToBottomEvent();
+	detectScrollToBottomEvent();
 	detectWindowResizeEvent();
 	detectWindowSizeAction();
-	//		closeOpenObjectsEvent();
+	closeOpenObjectsEvent();
 	showFormAction();
 });
 
@@ -80,12 +80,12 @@ function createMobileFooterAnimation() {
 
 
 	// footer animation for mobile (in progress)
-//	$(document).click(function (e) {
-//		e.preventDefault();
-//		$('.footer-shift').removeClass('center').addClass('right');
-//		$('.mobile.footer-box:nth-child(2)').removeClass('focus');
-//		$('.mobile.footer-box:nth-child(1)').addClass('focus');
-//	})
+	//	$(document).click(function (e) {
+	//		e.preventDefault();
+	//		$('.footer-shift').removeClass('center').addClass('right');
+	//		$('.mobile.footer-box:nth-child(2)').removeClass('focus');
+	//		$('.mobile.footer-box:nth-child(1)').addClass('focus');
+	//	})
 }
 
 
