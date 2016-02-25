@@ -38,6 +38,7 @@ footer.show {
 	transition: all .4s ease;
 	-webkit-user-select: none;
 	user-select: none;
+	cursor: pointer;
 	margin-top: 6px;
 }
 
@@ -108,7 +109,7 @@ footer.show {
 	font-size: 18px;
 }
 
-.box-container {
+.footer-box-container {
 	display: -webkit-flex;
 	display: flex;
 	-webkit-align-items: center;
@@ -121,26 +122,39 @@ footer.show {
 	margin: auto;
 }
 
-.box {
+.footer-box {
 	flex: 1;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
-.box-content {
+.footer-box-content {
 	color: aliceblue;
 	text-align: center;
 }
 
-.-mobile-box-container {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-align-items: center;
-	align-items: center;
-	-webkit-justify-content: center;
-	justify-content: center;
+.mobile.footer-box-container {
+	display: block;
+	overflow: visible;
 	border-top: 2.4px solid;
 	border-top-color: #7B8286;
-	width: 85%;
-	margin: auto;
+	width: 100%;
+	padding: 10px;
+	height: 300px;
+}
+
+.mobile.footer-box-container .mobile.footer-box:first-child {
+
+}
+.mobile.footer-box-container .mobile.footer-box:nth-child(2) {
+}
+.mobile.footer-box-container .mobile.footer-box:nth-child(3) {
+}
+
+.mobile.footer-box {
+	position: absolute;
+	margin: 3px;
+	width: 300px;
 }
 
 /* Footer section end */
@@ -676,7 +690,7 @@ input.sign-up-placeholder:-ms-input-placeholder {
 
 /* Responsive With Device section start */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 910px) {
 	.navbar-menu-wrapper,
 	.box-container {
 		display: none;
@@ -695,9 +709,8 @@ input.sign-up-placeholder:-ms-input-placeholder {
 	}
 }
 
-@media screen and (min-width: 768px) {
-	.navbar-menu,
-	.mobile.box-container {
+@media screen and (min-width:  910px) {
+	.navbar-menu {
 		display: none;
 	}
 }
