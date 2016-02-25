@@ -503,7 +503,9 @@ a {
 
 
 /*form section start */
-
+.form-container li::selection { background: transparent }
+.form-container img::selection { background: transparent }
+.mention-info::selection { background: transparent }
 section {
 	display: none;
 	margin-top: 100px;
@@ -672,70 +674,70 @@ section .form-container .form-inner {
 /*input style start*/
 
 .sign-in-input {
-	padding-top: 40px;
-	width: 320px;
-	height: 200px;
+  padding-top: 40px;
+  width: 320px;
+  height: 200px;
 }
-
-.sign-up-input {
-	padding-top: 15px;
-	width: 320px;
-	height: 200px;
+.sign-up-input{
+  padding-top: 15px;
+  width: 320px;
+  height: 200px;
 }
-
 .input-contain {
-	width: 70%;
-	height: 200px;
-	margin: 0 auto;
-	border-radius: 3px;
+  width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 3px;
 }
-
 .input-contain .warp {
-	position: relative;
-	margin-top: 10px;
-	height: 25%;
-	width: 100%;
-	z-index: 2;
-	background-color: transparent;
-	border-bottom: 1px solid #A6A2A2;
+  position: relative;
+  margin-top: 10px;
+  height: 25%;
+  width: 100%;
+  z-index: 2;
+  background-color: transparent;
+  transition: all .4s ease;
 }
 
-.input-contain input[type=text],
-input[type=password] {
-	float: left;
-	margin-top: 10px;
-	width: 80%;
-	height: 80%;
-	font-family: 'Raleway', sans-serif;
-	font-size: 14px;
-	overflow: hidden;
-	color: #DCDCDD;
-	background-color: transparent;
-	border: 1px solid transparent;
-	letter-spacing: 1.5px;
-	outline: none;
+.input-contain input[type=text],input[type=password] {
+  border:none;
+  float: left;
+  margin-top: 10px;
+  width: 100%;
+  height: 80%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  color: #DCDCDD;
+  background-color: transparent;
+  border-bottom: 2px solid #A6A2A2;
+  letter-spacing: 1.5px;
+  outline: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
-
-.sign-up-input .input-contain .warp {
-	height: 22%
+.input-contain input[type=text]:focus,input[type=password]:focus{
+  border-bottom: 2px solid #E6CE69;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
-
+.sign-up-input .input-contain .warp{
+  height: 22%
+}
 input.sign-up-placeholder::-webkit-input-placeholder {
-	color: #6D6E6B !important;
+color: #6D6E6B !important;
 }
 
-input.sign-up-placeholder:-moz-placeholder {
-	/* Firefox 18- */
-	color: #6D6E6B !important;
+input.sign-up-placeholder:-moz-placeholder { /* Firefox 18- */
+color: #6D6E6B !important;  
 }
 
-input.sign-up-placeholder::-moz-placeholder {
-	/* Firefox 19+ */
-	color: #6D6E6B !important;
+input.sign-up-placeholder::-moz-placeholder {  /* Firefox 19+ */
+color: #6D6E6B !important;  
 }
 
-input.sign-up-placeholder:-ms-input-placeholder {
-	color: #6D6E6B !important;
+input.sign-up-placeholder:-ms-input-placeholder {  
+color: #6D6E6B !important;  
 }
 
 

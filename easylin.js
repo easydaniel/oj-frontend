@@ -140,28 +140,36 @@ function showFormAction() {
 	$('.tryform').click(function (e) {
 		e.preventDefault();
 		$('#card').toggleClass('active');
+	});
 
-		// close nav bar
-		$('.navbar-menu-list').slideToggle();
-		$('.navbar-toggle').removeClass('open');
-		if ($('.type-switch-item-list').is(':visible')) {
-			$('.type-switch-item-list').slideToggle();
+	$('.sign-up').on('click', function(){
+
+		if($( ".sign-in" ).hasClass( "active")){
+
+			$('.info-state').addClass('right');
+		  	$('.form-input').addClass('slide');
+		  	$('.sign-in').toggleClass('active');
+		  	$('.sign-up').toggleClass('active');
 		}
-	});
-
-	$('.sign-up').on('click', function (e) {
-		e.preventDefault();
-		$('.info-state').addClass('right');
-		$('.form-input').addClass('slide');
-		$('.sign-in').toggleClass('active');
-		$('.sign-up').toggleClass('active');
 
 	});
-	$('.sign-in').on('click', function (e) {
-		e.preventDefault();
-		$('.info-state').removeClass('right');
-		$('.form-input').removeClass('slide');
-		$('.sign-in').toggleClass('active');
-		$('.sign-up').toggleClass('active');
+
+	$('.sign-in').on('click', function(){
+
+		if($( ".sign-up" ).hasClass( "active")){
+
+			$('.info-state').removeClass('right');
+			$('.form-input').removeClass('slide');
+			$('.sign-in').toggleClass('active');
+			$('.sign-up').toggleClass('active');
+		}
+
+	});
+
+	$('.tabIgnore').keydown(function(e) {
+	    if (e.keyCode === 9) {
+	        e.preventDefault();
+	        e.preventDefault();
+	    }
 	});
 }
