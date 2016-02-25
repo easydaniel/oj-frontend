@@ -8,7 +8,7 @@ $(document).ready(function () {
 	//	detectScrollToBottomEvent();
 	detectWindowResizeEvent();
 	detectWindowSizeAction();
-	//	closeOpenObjectsEvent();
+	//		closeOpenObjectsEvent();
 	showFormAction();
 });
 
@@ -74,8 +74,18 @@ function detectWindowResizeEvent() {
 
 function createMobileFooterAnimation() {
 	if ($(window).width() <= 910) {
-	} else {
+		$('.footer-shift').addClass('mobile center');
+		$('.mobile.footer-box:nth-child(2)').addClass('focus');
 	}
+
+
+	// footer animation for mobile (in progress)
+//	$(document).click(function (e) {
+//		e.preventDefault();
+//		$('.footer-shift').removeClass('center').addClass('right');
+//		$('.mobile.footer-box:nth-child(2)').removeClass('focus');
+//		$('.mobile.footer-box:nth-child(1)').addClass('focus');
+//	})
 }
 
 
@@ -83,14 +93,13 @@ function detectWindowSizeAction() {
 	if ($(window).width() <= 910) {
 		$('.footer-box-container').addClass('mobile');
 		$('.footer-box').addClass('mobile');
-		$('.footer-shift').addClass('mobile');
+		$('.footer-shift').addClass('mobile center');
 		$('.mobile.footer-box:nth-child(2)').addClass('focus');
-
 	} else {
 		$('.footer-box-container').removeClass('mobile');
 		$('.footer-box').removeClass('mobile');
-		$('.footer-shift').removeClass('mobile');
-		$('.mobile.footer-box:nth-child(2)').removeClass('focus');
+		$('.footer-shift').removeClass('mobile left center right');
+		$('.mobile.footer-box *').removeClass('focus');
 	}
 }
 
