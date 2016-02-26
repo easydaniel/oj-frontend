@@ -1,16 +1,12 @@
-$(document).ready(function () {
+"use strict";
 
-	// Initialize
-	createNavbarMenuAnimation();
-	createVerdictTypeSwitchAnimation();
-	createFooterAnimation();
-	createMobileFooterAnimation();
-	detectScrollToBottomEvent();
-	detectWindowResizeEvent();
-	detectWindowSizeAction();
-	showFormAction();
+function turnOffjQueryMobileLoadingModule() {
+	$(document).on("mobileinit", function () {
+		$.mobile.loader.prototype.options.disabled = true;
+	});
+	$.mobile.loading().hide();
+}
 
-});
 
 function createNavbarMenuAnimation() {
 	$('.navbar-toggle').click(function (e) {
@@ -48,7 +44,7 @@ function createVerdictTypeSwitchAnimation() {
 function detectScrollToBottomEvent() {
 	if ($(window).width() > 910) {
 		$(window).scroll(function () {
-			if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+			if ($(window).scrollTop() + $(window).height() === $(document).height()) {
 				$('footer').addClass('show');
 				$('.footer-toggle').addClass('open');
 			} else {
@@ -64,7 +60,7 @@ function createFooterAnimation() {
 		e.preventDefault();
 		$(this).toggleClass('open');
 		$('footer').toggleClass('show');
-	})
+	});
 }
 
 function initializeFooterShift() {
@@ -73,6 +69,22 @@ function initializeFooterShift() {
 	$('.mobile.footer-box:nth-child(2)').addClass('focus');
 	$('.mobile.footer-box:nth-child(1)').removeClass('focus');
 	$('.mobile.footer-box:nth-child(3)').removeClass('focus');
+}
+
+function detectWindowSizeAction() {
+	if ($(window).width() <= 910) {
+		$('.footer-box-container').addClass('mobile');
+		$('.footer-box').addClass('mobile');
+		$('.footer-shift').addClass('mobile center');
+		$('.mobile.footer-box:nth-child(2)').addClass('focus');
+	} else {
+		$('.footer-box-container').removeClass('mobile');
+		$('.footer-box').removeClass('mobile');
+		$('.footer-shift.mobile').removeClass('mobile left center right');
+		$('.mobile.footer-box:nth-child(1)').removeClass('focus');
+		$('.mobile.footer-box:nth-child(2)').removeClass('focus');
+		$('.mobile.footer-box:nth-child(3)').removeClass('focus');
+	}
 }
 
 function detectWindowResizeEvent() {
@@ -119,44 +131,27 @@ function createMobileFooterAnimation() {
 
 }
 
-
-function detectWindowSizeAction() {
-	if ($(window).width() <= 910) {
-		$('.footer-box-container').addClass('mobile');
-		$('.footer-box').addClass('mobile');
-		$('.footer-shift').addClass('mobile center');
-		$('.mobile.footer-box:nth-child(2)').addClass('focus');
-	} else {
-		$('.footer-box-container').removeClass('mobile');
-		$('.footer-box').removeClass('mobile');
-		$('.footer-shift.mobile').removeClass('mobile left center right');
-		$('.mobile.footer-box:nth-child(1)').removeClass('focus');
-		$('.mobile.footer-box:nth-child(2)').removeClass('focus');
-		$('.mobile.footer-box:nth-child(3)').removeClass('focus');
-	}
-}
-
 function showFormAction() {
 	$('.tryform').click(function (e) {
 		e.preventDefault();
 		$('#card').toggleClass('active');
 	});
 
-	$('.sign-up').on('click', function(){
+	$('.sign-up').on('click', function () {
 
-		if($( ".sign-in" ).hasClass( "active")){
+		if ($(".sign-in").hasClass("active")) {
 
 			$('.info-state').addClass('right');
-		  	$('.form-input').addClass('slide');
-		  	$('.sign-in').toggleClass('active');
-		  	$('.sign-up').toggleClass('active');
+			$('.form-input').addClass('slide');
+			$('.sign-in').toggleClass('active');
+			$('.sign-up').toggleClass('active');
 		}
 
 	});
 
-	$('.sign-in').on('click', function(){
+	$('.sign-in').on('click', function () {
 
-		if($( ".sign-up" ).hasClass( "active")){
+		if ($(".sign-up").hasClass("active")) {
 
 			$('.info-state').removeClass('right');
 			$('.form-input').removeClass('slide');
@@ -166,10 +161,25 @@ function showFormAction() {
 
 	});
 
-	$('.tabIgnore').keydown(function(e) {
-	    if (e.keyCode === 9) {
-	        e.preventDefault();
-	        e.preventDefault();
-	    }
+	$('.tabIgnore').keydown(function (e) {
+		if (e.keyCode === 9) {
+			e.preventDefault();
+			e.preventDefault();
+		}
 	});
 }
+
+$(document).ready(function () {
+
+	// Initialize
+	createNavbarMenuAnimation();
+	createVerdictTypeSwitchAnimation();
+	createFooterAnimation();
+	createMobileFooterAnimation();
+	detectScrollToBottomEvent();
+	detectWindowResizeEvent();
+	detectWindowSizeAction();
+	turnOffjQueryMobileLoadingModule();
+	showFormAction();
+
+});
