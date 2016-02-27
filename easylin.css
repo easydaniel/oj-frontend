@@ -5,7 +5,6 @@ body {
 	margin-bottom: 120px;
 }
 
-
 /* Footer section start */
 
 footer {
@@ -729,15 +728,15 @@ color: #6D6E6B !important;
 }
 
 input.sign-up-placeholder:-moz-placeholder { /* Firefox 18- */
-color: #6D6E6B !important;  
+color: #6D6E6B !important;
 }
 
 input.sign-up-placeholder::-moz-placeholder {  /* Firefox 19+ */
-color: #6D6E6B !important;  
+color: #6D6E6B !important;
 }
 
-input.sign-up-placeholder:-ms-input-placeholder {  
-color: #6D6E6B !important;  
+input.sign-up-placeholder:-ms-input-placeholder {
+color: #6D6E6B !important;
 }
 
 

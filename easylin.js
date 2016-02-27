@@ -7,7 +7,6 @@ function turnOffjQueryMobileLoadingModule() {
 	$.mobile.loading().hide();
 }
 
-
 function createNavbarMenuAnimation() {
 	$('.navbar-toggle').click(function (e) {
 		e.preventDefault();
@@ -18,6 +17,7 @@ function createNavbarMenuAnimation() {
 		}
 	});
 }
+
 
 function createVerdictTypeSwitchAnimation() {
 	$('.type-switch-toggle').click(function (e) {
