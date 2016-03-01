@@ -473,6 +473,150 @@ footer.show {
 /* Navbar menu section end */
 
 
+/* Billboard*/
+
+.billboard{
+    
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 100px;
+    height: 1500px;
+}
+
+.billboard-info{
+    height: 40%;
+    background-color: antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.0rem;
+    color: black;
+    border-left: 10px solid #E05B4F;
+    border-radius: 10px;
+    box-shadow:5px 5px 5px black;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+
+
+.billboard-title{
+    padding-top: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Raleway', sans-serif;
+    color: #E05B4F;
+}
+
+.billboard-li:before{
+    content: "• ";
+    color: #E05B4F; /* or whatever color you prefer */
+}
+
+.billboard-li-power:before{
+    content: "O ";
+    color: #E05B4F; /* or whatever color you prefer */
+}
+
+.billboard-li-blue:before{
+    content: "O ";
+    color: #4CABDA; /* or whatever color you prefer */
+}
+
+.billboard-li-green:before{
+    content: "O ";
+    color: #84DCC5; /* or whatever color you prefer */
+}
+
+
+.billboard-ul {
+    list-style: none;
+}    
+
+.billboard-table{
+    margin-top: 50px;
+    width: 100%;
+    
+}
+    
+.billboard-blue-card-left{
+    margin-top: 20px;
+    margin-right: 2%;
+    height: 300px;
+    background-color: antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.0rem;
+    color: black;
+    border-left: 10px solid #4CABDA;
+    border-radius: 10px;
+    box-shadow:5px 5px 5px black;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+
+.billboard-blue-card-right{
+    margin-top: 20px;
+    margin-left: 2%;
+    height: 300px;
+    background-color: antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.0rem;
+    color: black;
+    border-left: 10px solid #4CABDA;
+    border-radius: 10px;
+    box-shadow:5px 5px 5px black;
+    line-height: 35px;
+    letter-spacing: 1px;
+    
+}
+
+.billboard-green-card-left{
+    margin-top: 20px;
+    margin-right: 2%;
+    height: 150px;
+    background-color: antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.0rem;
+    color: black;
+    border-left: 10px solid #84DCC5;
+    border-radius: 10px;
+    box-shadow:5px 5px 5px black;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+
+.billboard-green-card-right{
+    margin-top: 20px;
+    margin-left: 2%;
+    height: 150px;
+    background-color: antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.0rem;
+    color: black;
+    border-left: 10px solid #84DCC5;
+    border-radius: 10px;
+    box-shadow:5px 5px 5px black;
+    line-height: 35px;
+    letter-spacing: 1px;
+    
+}
+
+.billboard-blue-card-title{
+    padding-top: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-family: 'Raleway', sans-serif;
+    color: #4CABDA;
+}
+
+.billboard-green-card-title{
+    padding-top: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-family: 'Raleway', sans-serif;
+    color: #84DCC5;
+}
+
+
+    
+
 /*initialize start*/
 
 *,
