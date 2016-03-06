@@ -476,7 +476,6 @@ footer.show {
 /* Billboard*/
 
 .billboard{
-    
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 100px;
@@ -496,127 +495,109 @@ footer.show {
     letter-spacing: 1px;
 }
 
-
-.billboard-title{
+.billboard-card-left{
+    margin-top: 50px;
+    margin-right: 2.5%;
+    display: inline-block;
+    float: left;
+    height: 20%;
+    width: 47.5%;
+    background-color: antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.0rem;
+    color: black;
+    border-radius: 10px;
+    box-shadow:5px 5px 5px black;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+    
+.billboard-card-right{
+    margin-top: 50px;
+    margin-left: 2.5%;
+    display: inline-block;
+    height: 20%;
+    width: 47.5%;
+    float: left;
+    background-color: antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.0rem;
+    color: black;
+    border-radius: 10px;
+    border-left: 10px solid #E05B4F;
+    box-shadow:5px 5px 5px black;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+    
+.billboard .billboard-info h1{
     padding-top: 30px;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 10px;
     font-family: 'Raleway', sans-serif;
     color: #E05B4F;
 }
 
-.billboard-li:before{
-    content: "• ";
-    color: #E05B4F; /* or whatever color you prefer */
-}
-
-.billboard-li-power:before{
-    content: "O ";
-    color: #E05B4F; /* or whatever color you prefer */
-}
-
-.billboard-li-blue:before{
-    content: "O ";
-    color: #4CABDA; /* or whatever color you prefer */
-}
-
-.billboard-li-green:before{
-    content: "O ";
-    color: #84DCC5; /* or whatever color you prefer */
-}
-
-
-.billboard-ul {
-    list-style: none;
-}    
-
-.billboard-table{
-    margin-top: 50px;
-    width: 100%;
-    
-}
-    
-.billboard-blue-card-left{
-    margin-top: 20px;
-    margin-right: 2%;
-    height: 300px;
-    background-color: antiquewhite;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.0rem;
-    color: black;
-    border-left: 10px solid #4CABDA;
-    border-radius: 10px;
-    box-shadow:5px 5px 5px black;
-    line-height: 35px;
-    letter-spacing: 1px;
-}
-
-.billboard-blue-card-right{
-    margin-top: 20px;
-    margin-left: 2%;
-    height: 300px;
-    background-color: antiquewhite;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.0rem;
-    color: black;
-    border-left: 10px solid #4CABDA;
-    border-radius: 10px;
-    box-shadow:5px 5px 5px black;
-    line-height: 35px;
-    letter-spacing: 1px;
-    
-}
-
-.billboard-green-card-left{
-    margin-top: 20px;
-    margin-right: 2%;
-    height: 150px;
-    background-color: antiquewhite;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.0rem;
-    color: black;
-    border-left: 10px solid #84DCC5;
-    border-radius: 10px;
-    box-shadow:5px 5px 5px black;
-    line-height: 35px;
-    letter-spacing: 1px;
-}
-
-.billboard-green-card-right{
-    margin-top: 20px;
-    margin-left: 2%;
-    height: 150px;
-    background-color: antiquewhite;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.0rem;
-    color: black;
-    border-left: 10px solid #84DCC5;
-    border-radius: 10px;
-    box-shadow:5px 5px 5px black;
-    line-height: 35px;
-    letter-spacing: 1px;
-    
-}
-
-.billboard-blue-card-title{
+.billboard-card-left.blue h1{
     padding-top: 10px;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-left: 10px;
     font-family: 'Raleway', sans-serif;
     color: #4CABDA;
 }
 
-.billboard-green-card-title{
+.billboard-card-right.blue h1{
     padding-top: 10px;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-left: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: #4CABDA;
+}
+
+.billboard-card-left.green h1{
+    padding-top: 10px;
+    padding-left: 10px;
     font-family: 'Raleway', sans-serif;
     color: #84DCC5;
 }
 
+.billboard-card-right.green h1{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: #84DCC5;
+}
+
+div.red{
+    border-left: 10px solid #E05B4F;
+}
+
+div.blue{
+    border-left: 10px solid #4CABDA;
+}
+
+div.green{
+    border-left: 10px solid #84DCC5;
+}
+
+
+.billboard ul{
+    list-style: none;
+}
+
+.billboard li:before{
+    color: #E05B4F;
+    content: "O ";
+}
+
+.billboard .blue li:before{
+    color: #4CABDA;
+    content: "O ";
+}
+
+.billboard .green li:before{
+    color: #84DCC5;
+    content: "O ";
+}
 
     
-
 /*initialize start*/
 
 *,
